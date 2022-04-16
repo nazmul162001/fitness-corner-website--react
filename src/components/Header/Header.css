@@ -1,0 +1,25 @@
+.link {
+  text-decoration: none;
+  margin: 0 10px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  color: white;
+  transition: color ease-in-out 300ms;
+  background-color: transparent;
+}
+
+.link:hover {
+  color: #ffbb00;
+}
+
+.active-link {
+  text-decoration: none;
+  margin: 0 10px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  transition: color ease-in-out 300ms;
+  color: #ffbb00;
+  background-color: transparent;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
