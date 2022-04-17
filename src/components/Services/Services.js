@@ -1,6 +1,6 @@
-import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
 import SingleService from '../SingleService/SingleService';
+import './Services.css'
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -12,7 +12,7 @@ const Services = () => {
   }, []);
   return (
     <section className="services px-10">
-      <div className="services-title mb-10">
+      <div className="services-title relative mb-10">
         <h2 className="text-5xl font-bold text-center">
           Our{' '}
           <span className="font-extrabold" style={{ color: '#74b9ff' }}>

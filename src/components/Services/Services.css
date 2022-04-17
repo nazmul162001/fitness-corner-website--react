@@ -1,0 +1,14 @@
+.services-title::before{
+  content: '';
+  position: absolute;
+  /* background-color: #74B9FF; */
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(46,3,48,1) 0%, rgba(148,26,167,1) 27%, rgba(121,9,105,1) 55%, rgba(6,99,160,1) 79%, rgba(0,212,255,1) 100%);
+  width: 500px;
+  height: 120px;
+  left: 35%;
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(190px);
+  backdrop-filter: 4rem;
+  z-index: -1;
+  filter: blur(120px);
+}
