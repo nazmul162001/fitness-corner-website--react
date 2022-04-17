@@ -7,7 +7,7 @@ const Register = () => {
   const navigate = useNavigate();
   const [err, setErr] = useState('');
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true} );
 
   // handle signUp
   const handleSignUp = (e) => {
@@ -19,12 +19,14 @@ const Register = () => {
       setErr('password do not matched');
       return;
     }
-    else if(password.length < 6){
+    if(password.length < 6){
       setErr('password must be 6 or more character')
+      return
     }
     createUserWithEmailAndPassword(email, password);
     // console.log(email, password, confirmPassword);
     setErr('');
+    alert('email sent')
   };
 
   return (

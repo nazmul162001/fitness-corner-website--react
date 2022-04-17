@@ -1,9 +1,19 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
+import auth from '../../firebase.init';
 import logo from '../../images/logo/GoFitLogo (3).png';
 import './Header.css';
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+
+
+  const handleLogOut = () => {
+    signOut(auth);
+  };
+
   return (
     <nav className="bg-black text-white h-20 flex items-center justify-between px-10 sticky top-0 z-10">
       <div className="logo">
@@ -20,12 +30,6 @@ const Header = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? 'active-link' : 'link')}
-          to="/checkout"
-        >
-          Checkout
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? 'active-link' : 'link')}
           to="/Blogs"
         >
           Blogs
@@ -36,12 +40,23 @@ const Header = () => {
         >
           About Me
         </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? 'active-link' : 'link')}
-          to="/Login"
-        >
-          Login
-        </NavLink>
+
+        {user ? (
+          <NavLink
+            onClick={handleLogOut}
+            className={({ isActive }) => (isActive ? 'active-link' : 'link')}
+            to="/Login"
+          >
+            LogOut
+          </NavLink>
+        ) : (
+          <NavLink
+            className={({ isActive }) => (isActive ? 'active-link' : 'link')}
+            to="/Login"
+          >
+            Login
+          </NavLink>
+        )}
       </div>
     </nav>
   );
