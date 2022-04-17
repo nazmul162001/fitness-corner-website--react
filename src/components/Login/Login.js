@@ -15,28 +15,25 @@ const Login = () => {
   const [err, setErr] = useState('');
 
   // google SignIn
-  const [signInWithGoogle, user2, loading, error] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, googleUser, loading, error] = useSignInWithGoogle(auth);
 
   let errorMessage;
   if(error){
-    errorMessage = <p className='text-red-500'>{error.message} </p>
-  }
-  if(user2){
-    navigate('/')
+    errorMessage = <p className='text-red-500 italic'>{'Login failed, please try again'} </p>
   }
 
   // for require auth
   const location = useLocation();
   const from = location.state?.from?.pathname || '/';
 
-  if (user) {
+  if (user || googleUser) {
     navigate(from, { replace: true });
   }
 
   //handle reset password
   const handleResetPassword = () => {
     if (!email) {
-      toast.error('Please input an email')
+      toast.error('Please input email')
     }
     sendPasswordResetEmail(auth, email).then(() => {
       toast.success('email sent ! Check inbox')
