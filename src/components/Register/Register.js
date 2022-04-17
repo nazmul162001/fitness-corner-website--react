@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -26,7 +28,8 @@ const Register = () => {
     createUserWithEmailAndPassword(email, password);
     // console.log(email, password, confirmPassword);
     setErr('');
-    alert('email sent')
+    toast.success('Successfully SignUp,Please Confirm Your Email')
+
   };
 
   return (
@@ -111,6 +114,17 @@ const Register = () => {
           Sign In with Github
         </button>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
