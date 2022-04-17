@@ -1,17 +1,29 @@
 import { sendPasswordResetEmail } from 'firebase/auth';
 import React, { useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword, user] =
     useSignInWithEmailAndPassword(auth);
   const [err, setErr] = useState('');
+
+  // google SignIn
+  const [signInWithGoogle, user2, loading, error] = useSignInWithGoogle(auth);
+
+  let errorMessage;
+  if(error){
+    errorMessage = <p className='text-red-500'>{error.message} </p>
+  }
+  if(user2){
+    navigate('/')
+  }
 
   // for require auth
   const location = useLocation();
@@ -30,6 +42,7 @@ const Login = () => {
       toast.success('email sent ! Check inbox')
     });
   };
+
 
   // handle signIn
   const handleSignIn = (e) => {
@@ -81,6 +94,7 @@ const Login = () => {
               required
             ></input>
             <p className="text-red-500 text-sm italic">{err}</p>
+            {errorMessage}
           </div>
           <div className="flex items-center justify-between">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline btn btn-link">
@@ -93,7 +107,7 @@ const Login = () => {
               Forgot Password?
             </span>
           </div>
-          <p>
+          <p className='my-3'>
             New here?{' '}
             <button
               onClick={() => navigate('/register')}
@@ -109,12 +123,12 @@ const Login = () => {
         <span className="px-3 text-xl">or</span>
         <div className="w-64 h-1 bg-gray-400"></div>
       </div>
-      <div className="social-login text-center text-white">
-        <button className="py-2 px-10 bg-cyan-600 m-2 rounded-full">
-          Sign In with Google
+      <div className="social-login flex wrapper flex-col md:flex-row justify-center text-white mt-5">
+        <button onClick={() => signInWithGoogle()} className="py-2 px-10 bg-slate-800 mx-8 md:mx-2 rounded-full flex items-center justify-center md:justify-between text-xl">
+          <FcGoogle className=' mx-5 md:mx-2 text-4xl' />  Sign In with Google
         </button>
-        <button className="py-2 px-10 bg-cyan-600 m-2 rounded-full">
-          Sign In with Github
+        <button className="py-2 px-10 bg-slate-800 mx-8 md:mx-2 rounded-full flex items-center justify-center md:justify-between text-xl">
+          <FcGoogle className=' mx-5 md:mx-2 text-4xl' />  Sign In with Github
         </button>
       </div>
       <ToastContainer
