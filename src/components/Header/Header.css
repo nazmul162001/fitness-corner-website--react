@@ -9,7 +9,7 @@
 }
 
 .link:hover {
-  color: #ffbb00;
+  color: #74b9ff;
 }
 
 .active-link {
@@ -18,7 +18,7 @@
   padding-bottom: 5px;
   font-size: 20px;
   transition: color ease-in-out 300ms;
-  color: #ffbb00;
+  color: #74b9ff;
   background-color: transparent;
   border-top: 1px solid;
   border-bottom: 1px solid;

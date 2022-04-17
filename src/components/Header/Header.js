@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../images/logo/GoFitLogo.png';
+import logo from '../../images/logo/GoFitLogo (3).png';
 import './Header.css';
 
 const Header = () => {
   return (
-    <nav className='bg-neutral-800 text-white h-20 flex items-center justify-between px-10'>
+    <nav className='bg-black text-white h-20 flex items-center justify-between px-10 sticky top-0 z-10'>
       <div className="logo">
         <img src= {logo} alt="" />
       </div>
