@@ -1,33 +1,50 @@
+import { sendPasswordResetEmail } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+  const [email, setEmail] = useState('');
   const navigate = useNavigate();
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   const [err, setErr] = useState('');
 
+  // for require auth
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
 
-  if(user){
-    navigate('/')
+  if (user) {
+    navigate(from, { replace: true });
   }
 
-  // handle signIn 
+  //handle reset password
+  const handleResetPassword = () => {
+    if (!email) {
+      toast.error('Please input an email')
+    }
+    sendPasswordResetEmail(auth, email).then(() => {
+      toast.success('email sent ! Check inbox')
+    });
+  };
+
+  // handle signIn
   const handleSignIn = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     signInWithEmailAndPassword(email, password)
-    .then(res => {
-      const user = res.user;
-      console.log(user);
-    })
-    .catch(error => {
-      setErr('user not found, please signUP or input valid info')
-    })
-  }
+      .then((res) => {
+        const user = res.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        setErr('user not found, please signUP or input valid info');
+      });
+  };
 
   return (
     <div className="w-100 mt-24">
@@ -41,6 +58,7 @@ const Login = () => {
               email
             </label>
             <input
+              onChange={(e) => setEmail(e.target.value)}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
@@ -62,20 +80,18 @@ const Login = () => {
               placeholder="password"
               required
             ></input>
-            <p className="text-red-500 text-sm italic">
-              {err}
-            </p>
+            <p className="text-red-500 text-sm italic">{err}</p>
           </div>
           <div className="flex items-center justify-between">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline btn btn-link">
               Log In
             </button>
-            <a
-              className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-              href="/"
+            <span
+              onClick={handleResetPassword}
+              className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 cursor-pointer"
             >
               Forgot Password?
-            </a>
+            </span>
           </div>
           <p>
             New here?{' '}
@@ -101,6 +117,17 @@ const Login = () => {
           Sign In with Github
         </button>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
