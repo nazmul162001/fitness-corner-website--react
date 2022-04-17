@@ -2,6 +2,7 @@ import React from 'react';
 import './HomePage.css';
 import banner from '../../images/banner/banner.png';
 import Services from '../Services/Services';
+import Footer from '../Footer/Footer';
 
 const HomePage = () => {
   return (
@@ -18,6 +19,9 @@ const HomePage = () => {
       </section>
       {/* Services section  */}
       <Services />
+
+      {/* Footer  */}
+      <Footer></Footer>
     </>
   );
 };
