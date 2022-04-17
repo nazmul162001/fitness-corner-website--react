@@ -14,6 +14,12 @@ const Header = () => {
       <div className="nav-menu">
         <NavLink
           className={({ isActive }) => (isActive ? 'active-link' : 'link')}
+          to="/"
+        >
+          Home
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? 'active-link' : 'link')}
           to="/checkout"
         >
           Checkout

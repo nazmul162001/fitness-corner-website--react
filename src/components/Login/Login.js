@@ -54,7 +54,7 @@ const Login = () => {
           <p>
             New here?{' '}
             <button onClick={() => navigate('/register')} className="btn btn-link text-blue-700 font-bold">
-              Register
+            Sign Up
             </button>{' '}
           </p>
         </form>
