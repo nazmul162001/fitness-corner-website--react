@@ -1,0 +1,44 @@
+[
+  {
+      "id": 1,
+      "name": "Special Train 6 month",
+      "price": "300",
+      "img": "https://imagizer.imageshack.com/img923/2978/2JnhZf.png",
+      "description": "A six-month workout program gives you plenty of time to set and reach muscle building goals and major exercise milestones. With hard work and discipline, you can make significant muscle gains while getting ripped.Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+  },
+  {
+      "id": 2,
+      "name": "Fitness Challenge",
+      "price": "300",
+      "img": "https://imagizer.imageshack.com/img923/2978/2JnhZf.png",
+      "description": "A six-month workout program gives you plenty of time to set and reach muscle building goals and major exercise milestones. With hard work and discipline, you can make significant muscle gains while getting ripped.Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+  },
+  {
+      "id": 3,
+      "name": "Physically fit",
+      "price": "300",
+      "img": "https://imagizer.imageshack.com/img923/2978/2JnhZf.png",
+      "description": "A six-month workout program gives you plenty of time to set and reach muscle building goals and major exercise milestones. With hard work and discipline, you can make significant muscle gains while getting ripped.Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+  },
+  {
+      "id": 4,
+      "name": "Workout Challenge",
+      "price": "300",
+      "img": "https://imagizer.imageshack.com/img923/2978/2JnhZf.png",
+      "description": "A six-month workout program gives you plenty of time to set and reach muscle building goals and major exercise milestones. With hard work and discipline, you can make significant muscle gains while getting ripped.Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+  },
+  {
+      "id": 5,
+      "name": "Grow as a Body Builder",
+      "price": "300",
+      "img": "https://imagizer.imageshack.com/img923/2978/2JnhZf.png",
+      "description": "A six-month workout program gives you plenty of time to set and reach muscle building goals and major exercise milestones. With hard work and discipline, you can make significant muscle gains while getting ripped.Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+  },
+  {
+      "id": 6,
+      "name": "Healthy Body",
+      "price": "300",
+      "img": "https://imagizer.imageshack.com/img923/2978/2JnhZf.png",
+      "description": "A six-month workout program gives you plenty of time to set and reach muscle building goals and major exercise milestones. With hard work and discipline, you can make significant muscle gains while getting ripped.Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa."
+  }
+]
