@@ -13,7 +13,7 @@ const Checkout = () => {
     const address = e.target.address.value;
 
     if(email && name && contact && address){
-      toast.success("Thank You for Booking, We'll contact you soon")
+      toast.success("Thank You for the Booking")
     }
   }
 

@@ -7,7 +7,7 @@ import Footer from '../Footer/Footer';
 const HomePage = () => {
   return (
     <>
-      <section className='banner grid grid-cols-1 md:grid-cols-2 px-10 pt-5 text-center'>
+      <section className='banner grid grid-cols-1 md:grid-cols-2 px-10 pt-5 text-center overflow-x-hidden'>
         <div className="banner-img">
           <img src= {banner} alt="" />
         </div>

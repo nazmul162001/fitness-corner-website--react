@@ -11,7 +11,7 @@ const Services = () => {
       .then((data) => setServices(data));
   }, []);
   return (
-    <section className="services px-10">
+    <section className="services px-10 overflow-x-hidden">
       <div className="services-title relative mb-10">
         <h2 className="text-5xl font-bold text-center pb-2">
           Our{' '}
