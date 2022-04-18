@@ -2,3 +2,43 @@
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-bottom: 1px solid orangered;
 }
+.btn-style{
+  transition: 1s;
+}
+.btn-style:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #262626;
+	transition: 1s;
+	transform: rotateX(90deg);
+	z-index: -1;
+}
+
+.btn-style:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #262626;
+	transition: 1s;
+	transform: rotateY(90deg);
+	z-index: -1;
+}
+
+.btn-style:hover:before {
+	transform: rotateX(0);
+}
+
+.btn-style:hover:after {
+	transform: rotateY(0);
+}
+
+.btn-style:hover {
+	color: white;
+}

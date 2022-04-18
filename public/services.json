@@ -16,21 +16,21 @@
   {
       "id": 3,
       "name": "Body Building",
-      "price": "300",
+      "price": "899",
       "img": "https://imagizer.imageshack.com/img923/2978/2JnhZf.png",
       "description": "The purpose of a bodybuilding workout differs from a general fitness workout. A fitness routine primarily tones the muscles and helps with weight loss while a bodybuilding workout is designed to increase muscle mass, or to “bulk up.” Most bodybuilders are never in competitions but are motivated by the desire to get stronger for work, or for a better-looking or more fit body, usually with defined major muscles in the arms, chest, legs, shoulders, and back. Some bodybuilders concentrate on the upper body while others focus on the lower body. Often, this is because the bodybuilder is concentrating on the muscles that will most help him or her in a sport, such as football, baseball, tennis, and soccer. Sometimes a bodybuilder will concentrate on a specific area of the body, such as the arms, chest, or legs."
   },
   {
       "id": 4,
       "name": "Yoga Fitness",
-      "price": "300",
+      "price": "699",
       "img": "https://imagizer.imageshack.com/img922/3803/TRPNn5.jpg",
       "description": " Yoga improves strength, balance and flexibility. Slow movements and deep breathing increase blood flow and warm up muscles, while holding a pose can build strength. Balance on one foot, while holding the other foot to your calf or above the knee (but never on the knee) at a right angle."
   },
   {
       "id": 5,
       "name": "Cycling",
-      "price": "300",
+      "price": "490",
       "img": "https://imagizer.imageshack.com/img924/6959/R1dNX7.jpg",
       "description": "A while back it seemed that cyclists were allergic to gyms and only used them during the pre-season to lift some weights and do strength training. Then, they would forget about the gym for the rest of the year, not using it even for spinning, a fitness activity so similar to cycling. Luckily, this has changed and several studies have shown that going to the gym regularly to do strength training or other activities such as Yoga, Pilates or Body Pump, is good for our overall fitness, helps avoid injuries, corrects muscle imbalances, breaks the routine and improves our social life."
   },

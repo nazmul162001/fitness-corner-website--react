@@ -21,3 +21,11 @@
   z-index: -1;
   filter: blur(100px);
 }
+
+@media only screen and (max-width:767px) {
+  .banner{
+    clip-path: none;
+    height: auto;
+    padding-bottom: 40px;
+  }
+}

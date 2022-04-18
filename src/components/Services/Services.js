@@ -13,13 +13,14 @@ const Services = () => {
   return (
     <section className="services px-10">
       <div className="services-title relative mb-10">
-        <h2 className="text-5xl font-bold text-center">
+        <h2 className="text-5xl font-bold text-center pb-2">
           Our{' '}
           <span className="font-extrabold" style={{ color: '#74b9ff' }}>
             Services
           </span>{' '}
         </h2>
-        <h3 className="text-center text-3xl font-semibold text-gray-400">
+        <hr className='w-[300px] mx-auto border-orange-500 border-b-2' />
+        <h3 className="text-center text-3xl pt-1 font-semibold text-gray-400">
           What We Provided
         </h3>
       </div>
