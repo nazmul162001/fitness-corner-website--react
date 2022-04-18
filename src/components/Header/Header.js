@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="bg-black text-white h-20 flex items-center justify-between px-10 sticky top-0 z-10">
+    <nav className="bg-black text-white h-20 flex items-center justify-between px-10 sticky top-0 z-50">
       {/* Responsive menu  */}
       <div
         onClick={() => setOpen(!open)}
