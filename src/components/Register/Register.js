@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
@@ -24,6 +24,10 @@ const Register = () => {
     );
   }
 
+    // for require auth
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
   // handle signUp
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -41,7 +45,7 @@ const Register = () => {
     createUserWithEmailAndPassword(email, password);
     // console.log(email, password, confirmPassword);
     setErr('');
-    toast.success('Successfully SignUp,Please Confirm Your Email');
+    navigate(from, { replace: true });
   };
 
   return (
