@@ -1,15 +1,28 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FcGoogle } from 'react-icons/fc';
 
 const Register = () => {
   const navigate = useNavigate();
   const [err, setErr] = useState('');
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true} );
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+  // handleGoogleSignUp
+  // google SignIn
+  const [signInWithGoogle, googleUser, loading2, error2] =
+    useSignInWithGoogle(auth);
+
+  let errorMessage;
+  if (error2) {
+    errorMessage = (
+      <p className="text-red-500 italic">{error2.message} </p>
+    );
+  }
 
   // handle signUp
   const handleSignUp = (e) => {
@@ -21,15 +34,14 @@ const Register = () => {
       setErr('password do not matched');
       return;
     }
-    if(password.length < 6){
-      setErr('password must be 6 or more character')
-      return
+    if (password.length < 6) {
+      setErr('password must be 6 or more character');
+      return;
     }
     createUserWithEmailAndPassword(email, password);
     // console.log(email, password, confirmPassword);
     setErr('');
-    toast.success('Successfully SignUp,Please Confirm Your Email')
-
+    toast.success('Successfully SignUp,Please Confirm Your Email');
   };
 
   return (
@@ -83,7 +95,8 @@ const Register = () => {
               placeholder="confirm password"
               required
             ></input>
-            <p className="text-red-500 text-xs italic">{err}</p>
+            <p className="text-red-500 text-xl italic">{err}</p>
+            <p className="text-red-500 text-xl italic"> {errorMessage} </p>
           </div>
           <div className="flex items-center justify-between">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline btn btn-link">
@@ -106,12 +119,12 @@ const Register = () => {
         <span className="px-3 text-xl">or</span>
         <div className="w-64 h-1 bg-gray-400"></div>
       </div>
-      <div className="social-login text-center text-white">
-        <button className="py-2 px-10 bg-cyan-600 m-2 rounded-full">
-          Sign In with Google
-        </button>
-        <button className="py-2 px-10 bg-cyan-600 m-2 rounded-full">
-          Sign In with Github
+      <div className="social-login flex justify-center text-white">
+        <button
+          onClick={() => signInWithGoogle()}
+          className="py-2 px-10 bg-slate-800 mx-8 md:mx-2 rounded-full flex items-center justify-center text-xl mb-3 md:mb-0"
+        >
+          <FcGoogle className=" mx-5 md:mx-2 text-4xl" /> Sign In with Google
         </button>
       </div>
       <ToastContainer

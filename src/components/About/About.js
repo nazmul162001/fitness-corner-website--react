@@ -5,7 +5,7 @@ import profile from '../../images/profile.png';
 const About = () => {
   return (
     <div className="about-me bg-gradient-to-r from-blue-700 to-emerald-500 w-100 h-screen">
-      <h1 className="text-center text-5xl relative z-10 font-bold text-slate-300 py-5">
+      <h1 className="text-center text-5xl relative z-10 font-bold text-slate-300 py-2">
         About Me
       </h1>
       <div className="about-info rounded-2xl grid grid-cols-1 md:grid-cols-2 justify-between items-center px-10 relative z-20">
@@ -19,12 +19,12 @@ const About = () => {
           </p>
           <button
             type="button"
-            class=" text-2xl bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 py-3 px-5 rounded-lg my-3"
+            class=" text-xl bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 py-2 px-5 rounded-lg my-3"
           >
             Let's Me Some Guide
           </button>
 
-          <div className="goal p-3 mt-3">
+          <div className="goal p-3">
             <p>
               {' '}
               <strong className="text-xl italic">My Current Skill:</strong>{' '}
@@ -44,7 +44,7 @@ const About = () => {
         </div>
         <div className="personal-image flex justify-center items-center">
           <img
-            className="relative z-10 rounded-2xl my-10"
+            className="relative z-10 rounded-2xl my-5"
             src={profile}
             alt=""
           />

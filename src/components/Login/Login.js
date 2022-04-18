@@ -65,7 +65,7 @@ const Login = () => {
               className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="email"
             >
-              email
+              Email
             </label>
             <input
               onChange={(e) => setEmail(e.target.value)}
@@ -120,12 +120,9 @@ const Login = () => {
         <span className="px-3 text-xl">or</span>
         <div className="w-64 h-1 bg-gray-400"></div>
       </div>
-      <div className="social-login flex wrapper flex-col md:flex-row justify-center text-white mt-5">
-        <button onClick={() => signInWithGoogle()} className="py-2 px-10 bg-slate-800 mx-8 md:mx-2 rounded-full flex items-center justify-center md:justify-between text-xl mb-3 md:mb-0">
+      <div className="social-login flex justify-center text-white mt-5">
+        <button onClick={() => signInWithGoogle()} className="py-2 px-10 bg-slate-800 mx-8 md:mx-2 rounded-full flex items-center justify-center text-xl">
           <FcGoogle className=' mx-5 md:mx-2 text-4xl' />  Sign In with Google
-        </button>
-        <button className="py-2 px-10 bg-slate-800 mx-8 md:mx-2 rounded-full flex items-center justify-center md:justify-between text-xl">
-          <FcGoogle className=' mx-5 md:mx-2 text-4xl' />  Sign In with Github
         </button>
       </div>
       <ToastContainer
