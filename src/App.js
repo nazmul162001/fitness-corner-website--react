@@ -9,6 +9,7 @@ import LogOut from './components/LogOut/LogOut';
 import Register from './components/Register/Register';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import NotFound from './components/NotFound/NotFound';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/logout" element={<LogOut></LogOut>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 }

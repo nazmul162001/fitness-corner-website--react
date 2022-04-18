@@ -35,7 +35,7 @@ const Checkout = () => {
               Name
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
               id="name"
               type="text"
               name="name"
@@ -52,7 +52,7 @@ const Checkout = () => {
               Email
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-black"
               id="email"
               type="email"
               name="email"
@@ -63,13 +63,13 @@ const Checkout = () => {
 
           <div className="mb-4">
             <label
-              className="block text-gray-300 text-sm font-bold mb-2"
+              className="block text-sm font-bold mb-2 text-white"
               htmlFor="address"
             >
               address
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-black"
               id="address"
               type="text"
               name="address"
@@ -80,13 +80,13 @@ const Checkout = () => {
 
           <div className="mb-4">
             <label
-              className="block text-gray-300 text-sm font-bold mb-2"
+              className="block text-sm font-bold mb-2 text-white"
               htmlFor="tel"
             >
               Contact No:
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-300 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline text-black"
               id="tel"
               type="tel"
               name="contact"

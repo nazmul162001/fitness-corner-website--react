@@ -19,9 +19,6 @@ const HomePage = () => {
       </section>
       {/* Services section  */}
       <Services />
-
-      {/* Footer  */}
-      <Footer></Footer>
     </>
   );
 };
