@@ -1,6 +1,6 @@
 # Gym Trainer Project with React-firebase & tailwind Combination
 
-## This project host on Firebase [Live Link:](https://review-gallery.netlify.app/).
+## This project host on Firebase [Live Link:](https://fitness-corner-93736.web.app/).
 
 ## Project Overview
 * Home page: Fitness & Exercise Banner & Service section / what we provided
