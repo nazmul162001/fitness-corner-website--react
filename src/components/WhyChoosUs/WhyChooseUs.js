@@ -8,14 +8,16 @@ const WhyChooseUs = () => {
   
   return (
     <div className="choose-us my-5 px-10">
-      <h2 className="text-center text-4xl pb-2">Why Choose Me</h2>
-      <hr className="w-[250px] border-b-2 border-black mx-auto" />
-      <p className="text-center font-mono font-bold text-xl pb-5">
+      <h2 className="text-center text-4xl pb-2" data-aos="fade-right">Why Choose Me</h2>
+      <hr className="w-[250px] border-b-2 border-black mx-auto"  data-aos="zoom-in" />
+      <p className="text-center font-mono font-bold text-xl pb-5" data-aos="fade-left">
         Here are some Benefits for Choosing Me
       </p>
 
       <div className="our-benefit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-4">
-        <div className="cost">
+        <div className="cost" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <img src={cost} alt="" />
           <h2 className="text-3xl font-medium">LOW COST</h2>
           <p>
@@ -28,7 +30,9 @@ const WhyChooseUs = () => {
             production volumes.
           </p>
         </div>
-        <div className="cost">
+        <div className="cost" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
           <img src={support} alt="" />
           <h2 className="text-3xl font-medium">24/7 SUPPORT</h2>
           <p>
@@ -38,7 +42,9 @@ const WhyChooseUs = () => {
             24/7 support, in real-time a top component of good customer service, One of my constant arguments with technicians is about the “requirement” for after hours work. It is only under truly extreme circumstances that you need to work after 6PM on regular business days. That is a fact.{' '}
           </p>
         </div>
-        <div className="cost">
+        <div className="cost" data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <img src={gurantee} alt="" />
           <h2 className="text-3xl font-medium">Satisfaction Gurantee</h2>
           <p>

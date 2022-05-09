@@ -6,7 +6,9 @@ const SingleService = ({service}) => {
   const {name, price, description, img} = service;
   const navigate = useNavigate();
   return (
-    <div className='service-container rounded-md p-8 text-left'>
+    <div className='service-container rounded-md p-8 text-left' data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
       <img className='rounded-2xl h-[250px]' src= {img} alt="" />
       <h2 className='text-2xl'> {name} </h2>
       <p className='text-gray-500'> {description.slice(0, 200)} </p>
