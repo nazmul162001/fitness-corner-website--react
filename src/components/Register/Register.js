@@ -24,9 +24,14 @@ const Register = () => {
     );
   }
 
-    // for require auth
-    const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
+  // for require auth
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
+  
+  if ( googleUser ) {
+    navigate(from, { replace: true });
+  }
+
 
   // handle signUp
   const handleSignUp = (e) => {
