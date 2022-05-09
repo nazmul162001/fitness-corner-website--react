@@ -5,6 +5,7 @@ import support from '../../images/support.png';
 import gurantee from '../../images/gyrantee.png';
 
 const WhyChooseUs = () => {
+  
   return (
     <div className="choose-us my-5 px-10">
       <h2 className="text-center text-4xl pb-2">Why Choose Me</h2>
